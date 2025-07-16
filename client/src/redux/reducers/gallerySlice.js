@@ -12,7 +12,7 @@ export const getAllImages = createAsyncThunk(
     "images/fetchallimages",
     async (_, { rejectWithValue }) => {
         try {
-            const res = await axios.get("http://localhost:8000/api/v1/get/images");
+            const res = await axios.get("https://gallery-app-1-r18o.onrender.com/v1/get/images");
             return res.data;
         } catch (error) {
             return rejectWithValue(error.response?.data || error.message);
@@ -24,7 +24,7 @@ export const getAllCategories = createAsyncThunk(
     "images/fetchallcategories", // Typo: should probably be categories/fetchallcategories
     async (_, { rejectWithValue }) => {
         try {
-            const res = await axios.get("http://localhost:8000/api/v1/get/categories");
+            const res = await axios.get("https://gallery-app-1-r18o.onrender.com/v1/get/categories");
             return res.data;
         } catch (error) {
             return rejectWithValue(error.response?.data || error.message);
@@ -37,7 +37,7 @@ export const postNewCategory = createAsyncThunk(
     async (payload, { rejectWithValue }) => {
         try {
             const res = await axios.post(
-                "http://localhost:8000/api/v1/add/category",
+                "https://gallery-app-1-r18o.onrender.com/v1/add/category",
                 payload
             );
             return res.data;
@@ -52,7 +52,7 @@ export const postNewImage = createAsyncThunk(
     async (payload, { rejectWithValue }) => {
         try {
             const res = await axios.post(
-                "http://localhost:8000/api/v1/upload/image",
+                "https://gallery-app-1-r18o.onrender.com/v1/upload/image",
                 payload
             );
             return res.data;
@@ -67,7 +67,7 @@ export const getSingleImage = createAsyncThunk(
     async (payload, { rejectWithValue }) => {
         try {
             const res = await axios.get(
-                `http://localhost:8000/api/v1/get/singleimage?category=${payload}`
+                `https://gallery-app-1-r18o.onrender.com/v1/get/singleimage?category=${payload}`
             );
             return res.data;
         } catch (error) {

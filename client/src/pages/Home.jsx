@@ -153,7 +153,7 @@ const Home = () => {
                 className="bg-white rounded-2xl shadow-xl overflow-hidden transform transition duration-500 ease-in-out hover:scale-105 hover:shadow-2xl border border-gray-200"
               >
                 <img
-                  src={`http://localhost:8000/${item.name}`}
+                  src={`https://gallery-app-1-r18o.onrender.com/${item.name}`}
                   className="w-full h-64 object-cover rounded-t-2xl border-b-2 border-gray-100"
                   alt={`Gallery item ${item.name || index}`}
                 />

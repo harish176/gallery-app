@@ -25,7 +25,7 @@ const AddCategory = () => {
     try {
       // Directly make the API call to post a new category
       const res = await axios.post(
-        "http://localhost:8000/api/v1/add/category",
+        "https://gallery-app-1-r18o.onrender.com/v1/add/category",
         input
       );
       
